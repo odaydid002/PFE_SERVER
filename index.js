@@ -15,7 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ✅ Define Allowed Origins
-const allowedOrigins = ["http://127.0.0.1:5500", "http://localhost:5000"];
+const allowedOrigins = ["http://127.0.0.1:5500", "http://localhost:5000", "https://pfe-server-sandy.vercel.app"];
 
 // ✅ CORS Configuration
 app.use(cors({
