@@ -3,10 +3,10 @@ const {
     addUser,
     confirmPhone,
     checkPhone,
+    getUserInfo,
+    getProfile,
     loginUser,
-    logoutUser, 
-    getAuthenticatedUser, 
-    authMiddleware
+    logoutUser
 } = require("../controllers/userController");
 
 const router = express.Router();
@@ -14,11 +14,10 @@ const router = express.Router();
 // Public Routes
 router.post("/add", addUser);
 router.post("/confirmphone", confirmPhone);
-router.get("/checkphone", checkPhone);
 router.post("/login", loginUser);
 router.post("/logout", logoutUser);
-
-// 🔒 Protected Route: Check Authenticated User
-router.get("/protected", authMiddleware, getAuthenticatedUser);
+router.get("/checkphone", checkPhone);
+router.post("/get", getUserInfo);
+router.get("/auth", getProfile); 
 
 module.exports = router;
