@@ -50,7 +50,7 @@ exports.sendLoginLink = async (req, res) => {
     users.set(token, { email, expires: Date.now() + 30 * 60 * 1000 });
 
     // Secure login link
-    const loginLink = `http://127.0.0.1:5500/home/signup.html?token=${token}`;
+    const loginLink = `http://localhost:5000/signup?token=${token}`;
 
     // Configure Nodemailer
     const transporter = nodemailer.createTransport({
