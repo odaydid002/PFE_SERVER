@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 5000;
 
 // ✅ Enable CORS and Allow Credentials
 app.use(cors({
-    origin: ["http://127.0.0.1:5500", "http://localhost:5000", "https://pfe-server-sandy.vercel.app", "https://pjr.vercel.app"],
+    origin: ["http://127.0.0.1:5500", "http://localhost:5000", "https://pfe-server-sandy.vercel.app", "http://localhost:4000"],
     credentials: true
 }));
 
